@@ -1,0 +1,19 @@
+# Java build output (plain javac, no build tool — see each problem's README)
+out/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Go
+*.test
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
