@@ -67,7 +67,7 @@ flowchart TB
         direction LR
         Client1[Client 1] --> PA[Node A]
         Client2[Client 2] --> PB[Node B]
-        PA -.x.-|partition: no replication| PB
+        PA -.-x|partition: no replication| PB
         PA -->|"CP choice: reject write\n(stay consistent, sacrifice availability)"| R1[Error / unavailable]
         PB -->|"AP choice: accept write\n(stay available, risk stale/divergent reads)"| R2[200 OK, may diverge from A]
     end

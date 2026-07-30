@@ -37,7 +37,7 @@ DELETE /v1/keys/{key}                                  -> 200
 
 ```mermaid
 flowchart LR
-    Client --> Coordinator[Coordinator node\n(any node in cluster)]
+    Client --> Coordinator["Coordinator node\n(any node in cluster)"]
     Coordinator -->|consistent hash key| Ring[(Hash Ring\nvirtual nodes)]
     Ring --> N1[Node A - replica 1]
     Ring --> N2[Node B - replica 2]

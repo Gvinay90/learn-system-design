@@ -32,8 +32,8 @@ Part of the [8-week HLD learning path](../README.md).
 flowchart TB
     Q[Query: user_id = 4821] --> R{Shard strategy}
     R -->|Range: id 0-5000 -> Shard A| SA[(Shard A)]
-    R -->|Hash: hash(id) mod 3 -> Shard B| SB[(Shard B)]
-    R -->|Directory: lookup(id) -> Shard C| Dir[[Directory Service]] --> SC[(Shard C)]
+    R -->|"Hash: hash(id) mod 3 -> Shard B"| SB[(Shard B)]
+    R -->|"Directory: lookup(id) -> Shard C"| Dir[[Directory Service]] --> SC[(Shard C)]
 ```
 
 ## Concept: Replication (leader-follower, multi-leader, leaderless)
